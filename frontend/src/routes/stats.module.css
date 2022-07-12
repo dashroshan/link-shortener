@@ -1,0 +1,36 @@
+.bodyWrap {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(32, 34, 37);
+    box-sizing: border-box;
+    color: white;
+}
+
+.shortBtn {
+    border: none;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.shortBtnOk {
+    background: rgb(86, 0, 225);
+}
+
+.shortBtnNotOk {
+    background: rgb(255, 0, 89);
+}
+
+.shortBtn:hover {
+    transform: scale(95%);
+}

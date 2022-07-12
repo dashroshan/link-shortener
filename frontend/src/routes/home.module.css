@@ -1,0 +1,158 @@
+.bodyWrap {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(32, 34, 37);
+    box-sizing: border-box;
+}
+
+.card {
+    background: #18191C;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.cardNoShort {
+    border-radius: 0.5rem;
+}
+
+.cardShort {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.inputBox {
+    background: #202225;
+    border: none;
+    margin-bottom: 0.5rem;
+    width: 20rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: rgb(177, 177, 177);
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.inputBox:focus {
+    outline: rgb(86, 0, 225) 0.2rem solid;
+}
+
+.shortBtn {
+    border: none;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.shortBtn:hover {
+    transform: scale(95%);
+}
+
+.shortBtnNP {
+    background: rgb(86, 0, 225);
+    cursor: pointer;
+}
+
+.shortBtnP {
+    background: #525457;
+    cursor: not-allowed;
+}
+
+.shortCard {
+    background: #2F3137;
+    width: 27rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+}
+
+.shortLinkWrap {
+    color: white;
+    display: flex;
+    white-space: nowrap;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.shortLinkWrap:hover {
+    transform: scale(95%);
+}
+
+.shortLink {
+    overflow: scroll;
+    scrollbar-width: none;
+    border: rgb(86, 0, 225) 0.2rem solid;
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+}
+
+.shortLink::-webkit-scrollbar {
+    display: none;
+}
+
+.shortLinkLabel {
+    background: rgb(86, 0, 225);
+    padding: 1rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    font-weight: 700;
+    width: 6rem;
+    text-align: center;
+}
+
+.shortLinkLabel>div {
+    transform: translateY(0.2rem);
+}
+
+.miscButtons {
+    margin-top: 0.5rem;
+    display: flex;
+    color: white;
+    font-weight: 700;
+}
+
+.miscButtons>div {
+    border: rgb(86, 0, 225) 0.2rem solid;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.miscButtons>div:first-of-type {
+    margin-right: 0.5rem;
+    background: rgb(86, 0, 225);
+}
+
+.miscButtons>div:hover {
+    transform: scale(95%);
+}
+
+.warning {
+    margin-top: 0.5rem;
+    color: rgb(255, 0, 89);
+}
+
+@media (max-width: 500px) {
+    .inputBox {
+        width: 60vw;
+    }
+
+    .shortCard {
+        width: calc(60vw + 7rem);
+    }
+}
