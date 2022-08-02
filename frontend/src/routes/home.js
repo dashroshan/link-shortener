@@ -45,6 +45,11 @@ const Home = () => {
 
     return (
         <div className={classes.bodyWrap}>
+            <div className={classes.logo}>
+                <img src="icon.png" />
+                <span>Link Shortener</span>
+                <div></div>
+            </div>
             <div className={`${classes.card} ${(shortLinkData.visible) ? classes.cardShort : classes.cardNoShort}`}>
                 <input className={classes.inputBox} type="text" placeholder="Enter long link" value={longLink} onChange={(e) => setLongLink(e.target.value)} />
                 <input className={classes.inputBox} type="text" placeholder="Enter short link suffix" value={shortLink} onChange={(e) => setShortLink(e.target.value)} />

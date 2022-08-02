@@ -18,6 +18,31 @@
     padding: 2rem;
 }
 
+.logo{
+    color: rgb(86, 0, 225);
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img{
+    width: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.logo div{
+    display: block;
+    background-color: #18191C;
+    width: 110%;
+    height: 1rem;
+    position: relative;
+    top: -1rem;
+    z-index: -1;
+    border-radius: 0.2rem;
+}
+
 .cardNoShort {
     border-radius: 0.5rem;
 }
