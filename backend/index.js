@@ -2,6 +2,8 @@ const express = require('express');
 const Link = require('./mongodb');
 const cors = require('cors');
 
+const port = process.env.PORT || 3000;
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -30,7 +32,7 @@ async function createLink(req, res) {
 
 async function getLink(req, res) {
     const link = await Link
-        .findOneAndUpdate({ shortLink: req.body.shortLink }, { $inc: { visits: 1 }, $currentDate: { lastUsed: true} }, { new: true })
+        .findOneAndUpdate({ shortLink: req.body.shortLink }, { $inc: { visits: 1 }, $currentDate: { lastUsed: true } }, { new: true })
         .select({ longLink: 1 });
     if (link != null) res.status(200).send(link);
     else res.status(404).send('Short link not found!');
@@ -66,5 +68,4 @@ app.post('/visits', (req, res) => {
     getVisits(req, res);
 });
 
-const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Running on port ${port}...`));

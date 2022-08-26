@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
-const config = require('./config');
 
-mongoose.connect(config.mongoDBLink + 'shortlink')
+const mongoDBLink = process.env.MONGO || 'mongodb://localhost';
+
+mongoose.connect(mongoDBLink + '/shortlink')
     .then(() => console.log('Connected to mongodb...'))
     .catch((err) => console.error('Couldnot connect to mongodb...', err));
 
